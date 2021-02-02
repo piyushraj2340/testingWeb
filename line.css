@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+    
+  }
+  
+  .test {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(to left , #070811 , #00080e , #01070d ,  #070718);
+  }
+  
+  .test #circuit {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line0 {
+    animation: 15s lineAni ease infinite ; 
+  }
+  
+  .line1 {
+    animation: 10s lineAni  ease-in infinite ; 
+  }
+  .line2 {
+    animation: 12.5s lineAni  ease-in-out infinite ; 
+  }
+  .line3 {
+    animation: 7.5s lineAni  ease-out infinite ; 
+  }
+  .line4 {
+    animation: 5s lineAni  linear infinite ; 
+  }
+  
+  .line5 {
+    stroke-width: 1;
+    stroke: white;
+    stroke-dasharray: 20;
+    animation: 2s lineAni1 -1s linear infinite ;
+  }
+  
+  .line6 {
+    stroke-width: 1;
+    stroke: white;
+    animation: 2s lineAni2  linear infinite ;
+  }
+  
+  .line7 {
+    stroke-width: 1;
+    stroke: white;
+    animation: 2s lineAni3 -3s linear infinite;
+  }
+  
+  .line8 {
+    opacity: 1;
+    animation: 2s lineAni1 -1s linear infinite ;
+  }
+  
+  @keyframes lineAni {
+    0% {
+      stroke: #000;
+      stroke-opacity: 0.8;
+    }
+    10% {
+      stroke: #070811;
+      stroke-opacity: 0.4;
+    }
+    20% {
+      stroke: #00080e;
+      stroke-opacity: 0.8;
+    }
+    40% {
+      stroke: #070718;
+      stroke-opacity: 0.6;
+    }
+    60% {
+      stroke: #01070d;
+      stroke-opacity: 0.7;
+    }
+    80% {
+      stroke: #20b0b0;
+      stroke-opacity: 0.2;
+    }
+    100% {
+      stroke: #061131;
+      stroke-opacity: 0.2;
+    }
+  }
+  
+  @keyframes lineAni1 {
+    0% {
+      stroke-dashoffset: 40;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes lineAni2 {
+    0% {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+      stroke: #197c43;
+      opacity: 0.8;
+    }
+  
+    50% {
+      stroke-dasharray: 10;
+      stroke-dashoffset: 20;
+      stroke: #09d2ec;
+      opacity: 1;
+    }
+  
+    100% {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 40;
+      stroke: #175d5f;
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes lineAni3 {
+    0% {
+      stroke-dasharray: 20;
+      stroke-dashoffset: ;
+      stroke: #0ed4e3;
+      
+    }
+    50% {
+      stroke-dasharray: 10;
+      stroke-dashoffset: 20;
+      stroke: #20dbac;
+      
+    }
+    100% {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 40;
+      stroke: white;
+      
+    }
+  }
+  
