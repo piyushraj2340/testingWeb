@@ -20,50 +20,49 @@ body {
   height: 100%;
 }
 
-.rect0 {
-  animation: 15s rect ease infinite ; 
+.line0 {
+  animation: 15s lineAni ease infinite ; 
 }
 
-.rect1 {
-  animation: 10s rect  ease-in infinite ; 
+.line1 {
+  animation: 10s lineAni  ease-in infinite ; 
 }
-.rect2 {
-  animation: 12.5s rect  ease-in-out infinite ; 
+.line2 {
+  animation: 12.5s lineAni  ease-in-out infinite ; 
 }
-.rect3 {
-  animation: 7.5s rect  ease-out infinite ; 
+.line3 {
+  animation: 7.5s lineAni  ease-out infinite ; 
 }
-.rect4 {
-  animation: 5s rect  linear infinite ; 
+.line4 {
+  animation: 5s lineAni  linear infinite ; 
 }
 
-.rect5 {
+.line5 {
   stroke-width: 1;
   stroke: white;
   stroke-dasharray: 20;
-  animation: 2s rect1 1s linear infinite ;
+  animation: 2s lineAni1 1s linear infinite ;
 }
 
-.rect6 {
+.line6 {
   stroke-width: 1;
   stroke: white;
   stroke-dasharray: 20;
-  animation: 2s rect2  linear infinite ;
+  animation: 2s lineAni2  linear infinite ;
 }
 
-.rect7 {
+.line7 {
   stroke-width: 1;
   stroke: white;
   stroke-dasharray: 20;
-  animation: 2s rect3 6s linear infinite;
+  animation: 2s lineAni3 6s linear infinite;
 }
 
-.rect9 {
-  fill: black;
+.line8 {
   opacity: 0.15;
 }
 
-@keyframes rect {
+@keyframes lineAni {
   0% {
     stroke: #000;
     stroke-opacity: 0.8;
@@ -94,7 +93,7 @@ body {
   }
 }
 
-@keyframes rect1 {
+@keyframes lineAni1 {
   0% {
     stroke-dashoffset: 40;
   }
@@ -103,27 +102,27 @@ body {
   }
 }
 
-@keyframes rect2 {
+@keyframes lineAni2 {
   0% {
     stroke-dashoffset: 0;
     stroke: #197c43;
-    /* opacity: 0.8; */
+    opacity: 0.8;
   }
 
   50% {
     stroke-dashoffset: 20;
     stroke: #09d2ec;
-    /* opacity: 1; */
+    opacity: 1;
   }
 
   100% {
     stroke-dashoffset: 40;
     stroke: #175d5f;
-    /* opacity: 0.8; */
+    opacity: 0.8;
   }
 }
 
-@keyframes rect3 {
+@keyframes lineAni3 {
   0% {
     stroke-dashoffset: 0;
     stroke: #0ed4e3;
