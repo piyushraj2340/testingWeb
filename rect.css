@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+    
+  }
+  
+  .test {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(to left , #070811 , #00080e , #01070d ,  #070718);
+  }
+  
+  .test #circuit {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .rect0 {
+    animation: 15s rect ease infinite ; 
+  }
+  
+  .rect1 {
+    animation: 10s rect  ease-in infinite ; 
+  }
+  .rect2 {
+    animation: 12.5s rect  ease-in-out infinite ; 
+  }
+  .rect3 {
+    animation: 7.5s rect  ease-out infinite ; 
+  }
+  .rect4 {
+    animation: 5s rect  linear infinite ; 
+  }
+  
+  .rect5 {
+    stroke-width: 1;
+    stroke: white;
+    stroke-dasharray: 20;
+    animation: 2s rect1 1s linear infinite ;
+  }
+  
+  .rect6 {
+    stroke-width: 1;
+    stroke: white;
+    stroke-dasharray: 20;
+    animation: 10s rect2 3s linear infinite ;
+  }
+  
+  .rect7 {
+    stroke-width: 1;
+    stroke: white;
+    stroke-dasharray: 20;
+    animation: 2s rect3 6s linear infinite;
+  }
+  
+  .rect9 {
+    fill: black;
+    opacity: 0.15;
+  }
+  
+  @keyframes rect {
+    0% {
+      stroke: #000;
+      stroke-opacity: 0.8;
+    }
+    10% {
+      stroke: #070811;
+      stroke-opacity: 0.4;
+    }
+    20% {
+      stroke: #00080e;
+      stroke-opacity: 0.8;
+    }
+    40% {
+      stroke: #070718;
+      stroke-opacity: 0.6;
+    }
+    60% {
+      stroke: #01070d;
+      stroke-opacity: 0.7;
+    }
+    80% {
+      stroke: #20b0b0;
+      stroke-opacity: 0.2;
+    }
+    100% {
+      stroke: #061131;
+      stroke-opacity: 0.2;
+    }
+  }
+  
+  @keyframes rect1 {
+    0% {
+      stroke-dashoffset: 40;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes rect2 {
+    0% {
+      stroke-dashoffset: 40;
+      stroke: #070811;
+      opacity: 0.8;
+    }
+    50% {
+      stroke-dashoffset: 20;
+      stroke: #00080e;
+      opacity: 0.5;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      stroke: #0ed4e3;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rect3 {
+    0% {
+      stroke-dashoffset: 0;
+      stroke: #0ed4e3;
+      
+    }
+    50% {
+      stroke-dashoffset: 20;
+      stroke: #20dbac;
+      
+    }
+    100% {
+      stroke-dashoffset: 40;
+      stroke: white;
+      
+    }
+  }
+  

@@ -1,45 +1,63 @@
 
 var winX = window.innerWidth;
 var winY = window.innerHeight;
+var circleCodX = [];
+var circleCodY = []; 
 
 count = 0;
 
-for(let i=0; i < winX; i = i + 20) {
-  for(let j=0; j< winY; j = j + 20) {
-    var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    rect.setAttribute("x", i);
-    rect.setAttribute("y", j);
-    rect.setAttribute("width",  20);
-    rect.setAttribute("height", 20);
-    rect.setAttribute("fill", "none");
-    rect.setAttribute("stroke", "#0ed4e3");
-    rect.setAttribute("stroke-width", "1px");
-    rect.setAttribute("stroke-opacity","0.1");
-    rect.setAttribute("class", "rect" + Math.floor(Math.random() * 10));
+for(let i=0; i < winY; i = i + 20) {
+  let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("fill", "none");
+  path.setAttribute("stroke", "#0ed4e3");
+  path.setAttribute("stroke-width", "0.5");
+  path.setAttribute("stroke-opacity","0.1");
+  path.setAttribute("d", "M" + 0 + " " + i + "L" + winX + " " + i);
+  //path.setAttribute("d", "M" + i + " " + 0 + "L" + i + " " + winY);
+  path.setAttribute("class", "rect" + Math.floor(Math.random() * 10));
 
-    
+  
 
-    document.getElementById("circuit").appendChild(rect);
-    
-    console.log(winY + " " + winX );
+  document.getElementById("circuit").appendChild(path);
+  
+  console.log(winY + " " + winX );
+  
+}
+
+for(let j=0; j<= winX; j = j + 20) {
+  let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("fill", "none");
+  path.setAttribute("stroke", "#0ed4e3");
+  path.setAttribute("stroke-width", "0.5");
+  path.setAttribute("stroke-opacity","0.1");
+  //path.setAttribute("d", "M" + i + " " + 0 + "L" + i + " " + winY);
+  path.setAttribute("d", "M" + j + " " + 0 + "L" + j + " " + winX);
+  path.setAttribute("class", "rect" + Math.floor(Math.random() * 10));
+
+  
+
+  document.getElementById("circuit").appendChild(path);
+  
+  console.log(winY + " " + winX );
+}
+
+function randCircle() {
+  for(let i = 0 ; i < 35; i++) {
+    circleCodX[i] = 100 + Math.random() * winX - 100; 
+    circleCodY[i] = 100 + Math.random() * winY - 100;
+    var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", circleCodX[i]);
+    circle.setAttribute("cy", circleCodY[i]);
+    circle.setAttribute("r", 3 + "px");
+    circle.setAttribute("fill", "#043b3b");
+
+    let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", )
+    // console.log(100 + Math.random() * winX - 100);
+    // console.log(100 + Math.random() * winY - 100);
+
+  document.getElementById("circuit").appendChild(circle);
   }
 }
 
-//  setTimeout(function() {
-
-//   let lineNumbX = Math.floor(winX / 20);
-//   let lineNumbY = Math.floor(winY / 20);
-//   console.log(lineNumbX + " " + lineNumbY);
-//   var randLineHori0 = document.createElementNS("http://www.w3.org/2000/svg", "path");
-
-//   randLineHori0.setAttribute("d", "M0" + " " +  20 * Math.floor(Math.random() * 5 ) + " " +  "H" +winX);
-//   randLineHori0.setAttribute("stroke", "green");
-//   randLineHori0.setAttribute("stroke-width", 1);
-//   randLineHori0.setAttribute("stroke-opacity", 0.1);
-
-//   document.getElementById("circuit").appendChild(randLineHori0);
-
-   
-
-// }, 3000);
-
+randCircle();
