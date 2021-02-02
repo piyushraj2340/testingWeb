@@ -1,0 +1,121 @@
+
+
+
+
+
+body {
+    margin: 0;;
+    padding: 0;
+    background-color: #212121;
+  }
+   
+   
+  
+    .test {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px solid red;
+      position: absolute;
+      top:calc((100% - 300px)/2);
+      left:calc((100% - 300px)/2);
+      /* background-image: url("image/1.jpg"); */
+      background-attachment: fixed;
+      background-position: center center;
+      overflow: hidden;
+    }
+  
+   
+  
+  
+    
+   .wave, .wave0, .wave1, .wave2, .wave3, .wave4, .wave5{
+    position: absolute;
+    top:calc((100% - 300px)/2);
+    left:calc((100% - 300px)/2);
+    width:300px;
+    height:300px;
+    /* transform: translate(-50%, -50%); */
+    border-radius:300px;
+    background-image: url("image/1.jpg");
+    background-attachment:fixed;
+    background-position: center center;
+    background-size: auto 100%; 
+    cursor: pointer;
+    overflow: hidden;
+    /* border: 1px solid red; */
+  }
+  
+  .wave0, .wave1, .wave2, .wave3, .wave4, .wave5 {
+    width: 0px;
+    height: 0px;;
+    animation:w 1s linear 2s infinite;
+  
+  }
+  
+  span {
+    pointer-events: none;
+  
+  }
+  
+  .wave0{
+    /* z-index:2; */
+    background-size:auto 106%;
+    animation:w 1s forwards;
+    /* border: 1px solid springgreen; */
+  }
+  
+  .wave1{
+    /* z-index:3; */
+    background-size:auto 102%;
+    animation:w 1s .2s forwards;
+    /* border: 1px solid deeppink; */
+  }
+  .wave2{
+    /* z-index:4; */
+    background-size:auto 104%;
+    animation:w 1s .4s forwards;
+    /* border: 1px solid darkseagreen; */
+  }
+  .wave3{
+    /* z-index:5; */
+    background-size:auto 101%;
+    animation:w 1s .5s forwards;
+    /* border: 1px solid yellow; */
+  }
+  .wave4{
+    /* z-index:6; */
+    background-size:auto 102%;
+    animation:w 1s .8s forwards;
+    /* border: 1px solid green; */
+  }
+  .wave5{
+    /* z-index:7; */
+    background-size:auto 100%;
+    animation:w 1s 1s forwards;
+    /* border: 1px solid red; */
+    /* cursor: pointer; */ 
+  }
+  @keyframes w{
+    0%{
+      width:30px;
+      height:30px;
+    }
+    100%{
+      width:300px;
+      height:300px;
+    }
+  }
+  
+  
+  
+    @keyframes ripple {
+      0% {
+        width: 0px;
+        height: 0px;
+      }
+      100% {
+        width: 100px;
+        height: 100px;
+      }
+    }

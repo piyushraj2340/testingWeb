@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <meta name="viewport" content="width=device-width" initial-scall="1.0" />
+  </head>
+  <body>
+    <div id="test" onmousemove="myFunction(event)" onmouseout="clearCoor()">
+     <svg class="svg" viewBox="0 0 100 100" > 
+        <defs>
+          <linearGradient id="first" x1="79.4%" y1="18.25%" x2="10%" y2="19.3%">
+            <stop offset="0%" stop-color="#a93134" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#ec3136" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="second" x1="50%" y1="15%" x2="30%" y2="35%">
+            <stop offset="0%" stop-color="#109e30" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#3bac32" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="third" x1="23%" y1="39%" x2="42%" y2="70%">
+            <stop offset="0%" stop-color="#e47c00" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#ed9900" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="fourth" x1="75%" y1="70%" x2="31%" y2="60%">
+            <stop offset="0%" stop-color="#01379b" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#005db6" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <g class="grid">
+          <line class='line' x1="5" x2="5" y1="0" y2="100"></line>
+          <line class='line' x1="10" x2="10" y1="0" y2="100"></line>
+          <line class='line' x1="15" x2="15" y1="0" y2="100"></line>
+          <line class='line' x1="20" x2="20" y1="0" y2="100"></line>
+          <line class='line' x1="25" x2="25" y1="0" y2="100"></line>
+          <line class='line' x1="30" x2="30" y1="0" y2="100"></line>
+          <line class='line' x1="35" x2="35" y1="0" y2="100"></line>
+          <line class='line' x1="40" x2="40" y1="0" y2="100"></line>
+          <line class='line' x1="45" x2="45" y1="0" y2="100"></line>
+          <line class='line' x1="50" x2="50" y1="0" y2="100"></line>
+          <line class='line' x1="55" x2="55" y1="0" y2="100"></line>
+          <line class='line' x1="60" x2="60" y1="0" y2="100"></line>
+          <line class='line' x1="65" x2="65" y1="0" y2="100"></line>
+          <line class='line' x1="70" x2="70" y1="0" y2="100"></line>
+          <line class='line' x1="75" x2="75" y1="0" y2="100"></line>
+          <line class='line' x1="80" x2="80" y1="0" y2="100"></line>
+          <line class='line' x1="85" x2="85" y1="0" y2="100"></line>
+          <line class='line' x1="90" x2="90" y1="0" y2="100"></line>
+          <line class='line' x1="95" x2="95" y1="0" y2="100"></line>
+  
+          <line class='line' x1="0" x2="100" y1="5" y2="5"></line>
+          <line class='line' x1="0" x2="100" y1="10" y2="10"></line>
+          <line class='line' x1="0" x2="100" y1="15" y2="15"></line>
+          <line class='line' x1="0" x2="100" y1="20" y2="20"></line>
+          <line class='line' x1="0" x2="100" y1="25" y2="25"></line>
+          <line class='line' x1="0" x2="100" y1="30" y2="30"></line>
+          <line class='line' x1="0" x2="100" y1="35" y2="35"></line>
+          <line class='line' x1="0" x2="100" y1="40" y2="40"></line>
+          <line class='line' x1="0" x2="100" y1="45" y2="45"></line>
+          <line class='line' x1="0" x2="100" y1="50" y2="50"></line>
+          <line class='line' x1="0" x2="100" y1="55" y2="55"></line>
+          <line class='line' x1="0" x2="100" y1="60" y2="60"></line>
+          <line class='line' x1="0" x2="100" y1="65" y2="65"></line>
+          <line class='line' x1="0" x2="100" y1="70" y2="70"></line>
+          <line class='line' x1="0" x2="100" y1="75" y2="75"></line>
+          <line class='line' x1="0" x2="100" y1="80" y2="80"></line>
+          <line class='line' x1="0" x2="100" y1="85" y2="85"></line>
+          <line class='line' x1="0" x2="100" y1="90" y2="90"></line>
+          <line class='line' x1="0" x2="100" y1="95" y2="95"></line>
+          
+        </g>
+        <path class='first' d="M79.4 18.25 L67.8 26 A60 29 -26 0, 0  60 22.1 A10 19.3 -40.4 0, 0 54.8 8.4 A32 25 44 0,1 79.4 18.25" stroke-width="0.1" fill="url(#first)" stroke="none" />
+        <path class="second" d="M47.6 8.9 A50.8 27 0 0,1 54.3 21.5 A21.3 21 0 0 , 0 32.8 40.1 A24 43 0 0 , 1 20.9 32.2 A35 34 -20 0, 1 47.6 8.9" stroke-width="0.1" fill="url(#second)" stroke="none" />
+        <path class="third" d="M19.4 39.2 A28 35 0 0, 0 33 45.7 A25 21.7 0 0, 0 43.5 60.9 A90 47 0 0, 0 44.1 75.25 A34.5 34.5 0 0 , 1 19.4 39.2" stroke-width="0.1" fill="url(#third)" stroke="none" />
+        <path class="fourth" d="M79.2 66.6 L67.8 59 A29.5 42 -10 0, 1 48.79 63 A19 18 0 0, 0 51.2 76.7 A34 27.5 0 0, 0 79.2 66.6" stroke-width="0.1" fill="url(#fourth)" stroke="none" />
+        <!--1st Path-->
+        <path d="M42.63 27.5 V36 L38.5 39.8 V46.8 L42.3 50.2 V55" stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-1" cx="42.2" cy="55.5" r="1.8" stroke-width="1.3" fill="#2c648c" stroke="#312d2e" opacity="1"/>
+        <!--2nd Path-->
+        <path d="M47.85 57.4 V46.4 L43.4 42.3" stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-2" cx="42.9" cy="42" r="1.8" stroke-width="1.3" fill="#6cbfda" stroke="#312d2e" opacity="1"/> 
+        <!--3rd Path-->
+        <path d="M48.77 27.5 V38.8 L52.3 42 H60" stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-3" cx="59.9" cy="42" r="1.8" stroke-width="1.3" fill="#ffebee" stroke="#312d2e" opacity="1"/> 
+        <!--4th Path-->
+        <path d="M54.378 27.5 V34.7 " stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-4" cx="54.3" cy="34.7" r="1.8" stroke-width="1.3" fill="#2c648c" stroke="#312d2e" opacity="1"/> 
+        <!--5th Path-->
+        <path d="M51.2 57.4 V52.5 L54.9 49 " stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-5" cx="55.1" cy="49" r="1.8" stroke-width="1.3" fill="#6cbfda" stroke="#312d2e" opacity="1"/> 
+        <!--6th Path-->
+        <path d="M60.89 27.5 V33.6 L65.1 37.12" stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-6" cx="65.7" cy="37.7" r="1.8" stroke-width="1.3" fill="#6cbfda" stroke="#312d2e" opacity="1"/> 
+        <!--7th Path-->
+        <path d="M63.2 57.4 V49" stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-7" cx="63.2" cy="49" r="1.8" stroke-width="1.3" fill="#2c648c" stroke="#312d2e" opacity="1"/> 
+        <!--8th Path-->
+        <path d="M68.7 57.4 V48.9 L72.8 45.2 V38 L69 34.7 V30" stroke-width="1.3" fill="none" stroke="#312d2e" stroke-linecap="round" opacity="1"/>
+        <circle class="circle-ani-8" cx="69" cy="29.4" r="1.8" stroke-width="1.3" fill="#ffebee" stroke="#312d2e" opacity="1"/> 
+        <!--Svg Text-->
+        <text id="svg-text" x="25" y="84.8" style="font-family: Arial, Helvetica, sans-serif; font-size: 8px;">
+          <tspan dx="0" dy="0" fill="#aa3235">C</tspan>
+          <tspan dx="-2.5" dy="-0.2" fill="#e37b01" style="font-size: 6.5px">ODERS</tspan> 
+          <tspan dx="0" dy="0.2" fill="#18a033">L</tspan>
+          <tspan dx="-2.5" dy="0" fill="#013a9e" style="font-size: 6.5px">ODGE</tspan>
+        </text>
+        <!--Animation for css path-->
+        <!--1st path-->
+        <circle class="path-ani-1-1" cx="42.6" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-1-2" cx="42.6" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-1-3" cx="42.6" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-1-4" cx="42.6" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-1-5" cx="42.6" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-1-6" cx="42.6" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <!--2nd path-->
+        <circle class="path-ani-2-1" cx="47.85" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-2-2" cx="47.85" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-2-3" cx="47.85" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-2-4" cx="47.85" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-2-5" cx="47.85" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <!--3rd Path-->
+        <circle class="path-ani-3-1" cx="48.77" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-3-2" cx="48.77" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-3-3" cx="48.77" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-3-4" cx="48.77" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-3-5" cx="48.77" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-3-6" cx="48.77" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <!--4th Path-->
+        <circle class="path-ani-4-1" cx="54.378" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <!--5th Path-->
+        <circle class="path-ani-5-1" cx="54.378" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-5-2" cx="54.378" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-5-3" cx="54.378" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <!--6th Path-->
+        <circle class="path-ani-6-1" cx="60.89" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-6-2" cx="60.89" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-6-3" cx="60.89" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-6-4" cx="60.89" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <circle class="path-ani-6-5" cx="60.89" cy="27.5" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" /> 
+        <!--7th Path-->
+        <circle class="path-ani-7-1" cx="63.2" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+        <circle class="path-ani-7-2" cx="63.2" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />  
+        <!--8th Path-->
+        <circle class="path-ani-8-1" cx="68.7" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+        <circle class="path-ani-8-2" cx="68.7" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+        <circle class="path-ani-8-3" cx="68.7" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+        <circle class="path-ani-8-4" cx="68.7" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+        <circle class="path-ani-8-5" cx="68.7" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+        <circle class="path-ani-8-6" cx="68.7" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+        <circle class="path-ani-8-7" cx="68.7" cy="57.4" r="0.2" style="stroke: #0000ff; fill: #fff; stroke-width: 0.1px" />
+      </svg> 
+      <span id="test-out"></span>
+    </div>
+  
+   
+    <script src="index.js"></script>
+  </body>
+</html>
