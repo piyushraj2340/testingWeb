@@ -1,10 +1,10 @@
-
+"use strict";
 var winX = window.innerWidth;
 var winY = window.innerHeight;
 var circleCodX = [];
 var circleCodY = []; 
 
-count = 0;
+var count = 0;
 
 for(let i=0; i < winY; i = i + 20) {
   let line = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -55,6 +55,7 @@ function randCircle() {
       circle.setAttribute("cy", circleCodY[i]);
       circle.setAttribute("r", 3 + "px");
       circle.setAttribute("fill", "#043b3b");
+      circle.setAttribute("class",  "makeCircle");
 
       document.getElementById("circuit").appendChild(circle);
     }
@@ -76,7 +77,8 @@ function randCircle() {
       j++;
       path.setAttribute("stroke", "#043b3b");
       path.setAttribute("stroke-width", 1);
-      path.setAttribute("fill", "none")
+      path.setAttribute("fill", "none");
+      path.setAttribute("class",  "makePath");
     
       document.getElementById("circuit").appendChild(path);
   }
@@ -112,12 +114,14 @@ function randCircle() {
     circleTop.setAttribute("cy", circleTopCodY[i]);
     circleTop.setAttribute("r", 3 + "px");
     circleTop.setAttribute("fill", "#043b3b");
+    circleTop.setAttribute("class",  "makeCircle");
 
     let circleBootm = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circleBootm.setAttribute("cx", circleBottomCodX[i]);
     circleBootm.setAttribute("cy", circleBottomCodY[i]);
     circleBootm.setAttribute("r", 3 + "px");
     circleBootm.setAttribute("fill", "#043b3b");
+    circleBootm.setAttribute("class",  "makeCircle");
 
     document.getElementById("circuit").appendChild(circleTop);
     document.getElementById("circuit").appendChild(circleBootm);
@@ -129,6 +133,7 @@ function randCircle() {
     circleLeft.setAttribute("cy", circleLeftCodY[i]);
     circleLeft.setAttribute("r", 3 + "px");
     circleLeft.setAttribute("fill", "#043b3b");
+    circleLeft.setAttribute("class", "makeCircle");
 
     document.getElementById("circuit").appendChild(circleLeft);
 
@@ -137,6 +142,7 @@ function randCircle() {
     circleRight.setAttribute("cy", circleRightCodY[i]);
     circleRight.setAttribute("r", 3 + "px");
     circleRight.setAttribute("fill", "#043b3b");
+    circleRight.setAttribute("class", "makeCircle");
 
     document.getElementById("circuit").appendChild(circleRight);
   }
@@ -147,15 +153,17 @@ function randCircle() {
       pathTop.setAttribute("d" , "M" + circleTopCodX[i] + " " + -40 + "V"  + circleTopCodY[i]);
       pathTop.setAttribute("stroke", "#043b3b");
       pathTop.setAttribute("stroke-width", 1);
-      pathTop.setAttribute("fill", "none")
+      pathTop.setAttribute("fill", "none");
+      pathTop.setAttribute("class", "makePath");
     
-      document.getElementById("circuit").appendChild(pathTop);
 
       let pathBootm = document.createElementNS("http://www.w3.org/2000/svg", "path");
       pathBootm.setAttribute("d" , "M" + circleBottomCodX[i] + " " + winY + 40 + "V"  + circleBottomCodY[i]);
       pathBootm.setAttribute("stroke", "#043b3b");
       pathBootm.setAttribute("stroke-width", 1);
-      pathBootm.setAttribute("fill", "none")
+      pathBootm.setAttribute("fill", "none");
+      pathBootm.setAttribute("class", "makePath");
+
     
       document.getElementById("circuit").appendChild(pathTop);
       document.getElementById("circuit").appendChild(pathBootm);
@@ -166,15 +174,16 @@ function randCircle() {
       pathLeft.setAttribute("d" , "M" + -40 + " " + circleLeftCodY[i] + "H"  + circleLeftCodX[i]);
       pathLeft.setAttribute("stroke", "#043b3b");
       pathLeft.setAttribute("stroke-width", 1);
-      pathLeft.setAttribute("fill", "none")
+      pathLeft.setAttribute("fill", "none");
+      pathLeft.setAttribute("class",  "makePath");
     
-      document.getElementById("circuit").appendChild(pathLeft);
 
       let pathRight = document.createElementNS("http://www.w3.org/2000/svg", "path");
       pathRight.setAttribute("d" , "M" + winX  + 40 + " " + circleRightCodY[i] + "H"  + circleRightCodX[i]);
       pathRight.setAttribute("stroke", "#043b3b");
       pathRight.setAttribute("stroke-width", 1);
-      pathRight.setAttribute("fill", "none")
+      pathRight.setAttribute("fill", "none");
+      pathRight.setAttribute("class", "makePath");
     
       document.getElementById("circuit").appendChild(pathLeft);
       document.getElementById("circuit").appendChild(pathRight);

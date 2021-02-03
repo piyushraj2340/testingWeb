@@ -61,6 +61,31 @@ body {
   animation: 2s lineAni1 -1s linear infinite ;
 }
 
+.makeCircle {
+  fill: none;
+  opacity: 0;
+  animation: makeCircle 0.7s forwards;
+}
+
+.makePath {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: makePath 2s linear 0.7s forwards;
+}
+
+@keyframes makePath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes makeCircle {
+  to { 
+     fill: #043b3b;
+     opacity: 1;
+  }
+}
+
 @keyframes lineAni {
   0% {
     stroke: #000;
