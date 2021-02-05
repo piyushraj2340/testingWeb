@@ -1,15 +1,3 @@
-function myFunction(e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    var actualHeight = (window.innerHeight - 500) / 2;
-    var actualWidth = (window.innerWidth - 500) / 2;
-    var coor = "Coordinates: (" + (x - actualWidth) / 5 + "," + (y - actualHeight) / 5 + ")";
-    document.getElementById("test-out").innerHTML = coor;
-  }
-  
-  function clearCoor() {
-    document.getElementById("test-out").innerHTML = "";
-  }
 
 
 // // "circle" may be any tag name

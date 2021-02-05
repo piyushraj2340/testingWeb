@@ -1,8 +1,25 @@
+:root {
+  --xyz: "xyz";
+  --width: 400px;
+  --height: 400px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+[class^="path-ani"] {
+  display: none;
+  opacity: 0.5;
+  r: 0.5;
+  stroke: red;
+}
+
+
 body {
   margin: 0;
-  padding: 0;
-  /* background-color: red; */
-  
+  padding: 0;  
+  background-color: #212121;
 }
 
 .test {
@@ -12,7 +29,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #000;
-  background-image: linear-gradient(to left , #070811 , #00080e , #01070d ,  #070718);
+  background-image: linear-gradient(to left , #070811 , #00080e  , #01070d ,  #070718);
 }
 
 .test #circuit {
@@ -20,10 +37,31 @@ body {
   height: 100%;
 }
 
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%); 
+  /* background-image: url("image/cl.svg");  */
+  background-position: 0px 0px;
+  background-size: 100% 100%;
+  /* border: 1px solid red; */
+  width: var(--width  );
+  height: var(--height);
+  -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+    filter: drop-shadow( 0px 0px 100px #41e9e099 );
+}
+
+.svg .line {
+  stroke: #acacac;
+  stroke-width: 0.1px;
+  stroke-opacity: 0.5;
+}
+
+
 .line0 {
   animation: 15s lineAni ease infinite ; 
 }
-
 .line1 {
   animation: 10s lineAni  ease-in infinite ; 
 }
@@ -37,54 +75,6 @@ body {
   animation: 5s lineAni  linear infinite ; 
 }
 
-.line5 {
-  stroke-width: 1;
-  stroke: white;
-  stroke-dasharray: 20;
-  animation: 2s lineAni1 -1s linear infinite ;
-}
-
-.line6 {
-  stroke-width: 1;
-  stroke: white;
-  animation: 2s lineAni2  linear infinite ;
-}
-
-.line7 {
-  stroke-width: 1;
-  stroke: white;
-  animation: 2s lineAni3 -3s linear infinite;
-}
-
-.line8 {
-  opacity: 1;
-  animation: 2s lineAni1 -1s linear infinite ;
-}
-
-.makeCircle {
-  fill: none;
-  opacity: 0;
-  animation: makeCircle 0.7s forwards;
-}
-
-.makePath {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: makePath 2s linear 0.7s forwards;
-}
-
-@keyframes makePath {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes makeCircle {
-  to { 
-     fill: #043b3b;
-     opacity: 1;
-  }
-}
 
 @keyframes lineAni {
   0% {
@@ -116,6 +106,28 @@ body {
     stroke-opacity: 0.2;
   }
 }
+
+.line5 {
+  stroke-width: 1;
+  stroke: white;
+  stroke-dasharray: 20;
+  animation: 2s lineAni1 -1s linear infinite ;
+}
+.line6 {
+  stroke-width: 1;
+  stroke: white;
+  animation: 2s lineAni2  linear infinite ;
+}
+.line7 {
+  stroke-width: 1;
+  stroke: white;
+  animation: 2s lineAni3 -3s linear infinite;
+}
+.line8 {
+  opacity: 1;
+  animation: 2s lineAni1 -1s linear infinite ;
+}
+
 
 @keyframes lineAni1 {
   0% {
@@ -169,3 +181,795 @@ body {
     
   }
 }
+
+.makeCircle {
+  fill: none;
+  opacity: 0;
+  animation: makeCircle 0.7s forwards;
+}
+
+@keyframes makeCircle {
+  to { 
+     fill: #043b3b;
+     opacity: 1;
+  }
+}
+
+.makePath {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: makePath 2s linear 0.7s forwards;
+}
+
+@keyframes makePath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+
+/* new css file from import.css */
+
+
+
+/* 
+.path-ani-1-1 {
+  animation: path-ani-1 6s linear 0s infinite forwards;
+  display: inline;
+}
+
+.path-ani-1-2 {
+  animation: path-ani-1 6s linear 1s infinite forwards;
+  display: inline;
+}
+
+.path-ani-1-3 {
+  animation: path-ani-1 6s linear 2s infinite forwards;
+  display: inline;
+}
+
+.path-ani-1-4 {
+  animation: path-ani-1 6s linear -3s infinite forwards;
+  display: inline;
+}
+
+.path-ani-1-5 {
+  animation: path-ani-1 6s linear -1s infinite forwards;
+  display: inline;
+}
+
+.path-ani-1-6 {
+  animation: path-ani-1 6s linear -2s infinite forwards;
+  display: inline;
+}
+
+
+.path-ani-2-1 {
+  animation: path-ani-2 3s linear  infinite forwards;
+  display: inline;
+}
+.path-ani-2-2 {
+  animation: path-ani-2 3s linear -0.7s infinite forwards;
+  display: inline;
+}
+.path-ani-2-3 {
+  animation: path-ani-2 3s linear 1.4s infinite forwards;
+  display: inline;
+}
+.path-ani-2-4 {
+  animation: path-ani-2 3s linear -1.4s infinite forwards;
+  display: inline;
+}
+
+.path-ani-2-4 {
+  animation: path-ani-2 3s linear 0.7s infinite forwards;
+  display: inline;
+}
+
+.path-ani-3-1 {
+  animation: path-ani-3 6s linear 0s infinite forwards;
+  display: inline;
+}
+
+.path-ani-3-2 {
+  animation: path-ani-3 6s linear 1s infinite forwards;
+  display: inline;
+}
+
+.path-ani-3-3 {
+  animation: path-ani-3 6s linear 2s infinite forwards;
+  display: inline;
+}
+
+.path-ani-3-4 {
+  animation: path-ani-3 6s linear -3s infinite forwards;
+  display: inline;
+}
+
+.path-ani-3-5 {
+  animation: path-ani-3 6s linear -1s infinite forwards;
+  display: inline;
+}
+
+.path-ani-3-6 {
+  animation: path-ani-3 6s linear -2s infinite forwards;
+  display: inline;
+}
+
+.path-ani-4-1 {
+  animation: path-ani-4 1s linear  infinite forwards;
+  display: inline;
+}
+
+.path-ani-5-1 {
+  animation: path-ani-5 1.5s linear  infinite forwards;
+  display: inline;
+}
+.path-ani-5-2 {
+  animation: path-ani-5 1.5s linear 0.5s infinite forwards;
+  display: inline;
+}
+.path-ani-5-3 {
+  animation: path-ani-5 1.5s linear -0.5s infinite forwards;
+  display: inline;
+}
+
+.path-ani-6-1 {
+  animation: path-ani-6 2s linear  infinite forwards;
+  display: inline;
+}
+.path-ani-6-2 {
+  animation: path-ani-6 2s linear -0.7s infinite forwards;
+  display: inline;
+}
+.path-ani-6-3 {
+  animation: path-ani-6 2s linear -1.4s infinite forwards;
+  display: inline;
+}
+
+
+.path-ani-7-1 {
+  animation: path-ani-7 1s linear  infinite forwards;
+  display: inline;
+}
+
+.path-ani-7-2 {
+  animation: path-ani-7 1s linear -0.5s infinite forwards;
+  display: inline;
+}
+
+.path-ani-8-1 {
+  animation: path-ani-8 5s linear  infinite forwards;
+  display: inline;
+}
+
+.path-ani-8-2 {
+  animation: path-ani-8 5s linear -2s infinite forwards;
+  display: inline;
+}
+
+.path-ani-8-3 {
+  animation: path-ani-8 5s linear -1s infinite forwards;
+  display: inline;
+}
+
+.path-ani-8-4 {
+  animation: path-ani-8 5s linear 1s infinite forwards;
+  display: inline;
+}
+
+.path-ani-8-5 {
+  animation: path-ani-8 5s linear 2s infinite forwards;
+  display: inline;
+}
+
+.path-ani-8-6 {
+  animation: path-ani-8 5s linear 1.5s infinite forwards;
+  display: inline;
+}
+
+.path-ani-8-7 {
+  animation: path-ani-8 5s linear 2.5s infinite forwards;
+  display: inline;
+} */
+
+/* circle animation on logp path  */
+
+
+.circle-ani-1 {
+  animation: circle-ani 2.5s linear 1.1s forwards;
+}
+
+.circle-ani-2 {
+  animation: circle-ani 2.5s linear 1.15s forwards;
+}
+
+.circle-ani-3 {
+  animation: circle-ani 2.5s linear 1.20s forwards;
+}
+
+.circle-ani-4 {
+  animation: circle-ani 2.5s linear 1.25s forwards;
+}
+
+.circle-ani-5 {
+  animation: circle-ani 2.5s linear 1.30s  forwards;
+}
+
+.circle-ani-6 {
+  animation: circle-ani 2.5s linear 1.35s forwards;
+}
+
+.circle-ani-7 {
+  animation: circle-ani 2.5s linear 1.40s forwards;
+}
+
+.circle-ani-8 {
+  animation: circle-ani 2.5s linear 1.45s forwards;
+}
+
+@keyframes circle-ani {
+  0%{
+    stroke: #043b3b;
+    fill: #043b3b;
+    opacity: 1;
+    stroke-opacity: 1;
+  }
+  18% {
+    stroke: #043b3b;
+    fill: none;
+  }
+  20% {
+    stroke: none;
+    fill: #043b3b;
+  }
+  35% {
+    stroke: #043b3b;
+    fill: #043b3b;
+  }
+  75% {
+    stroke: none;
+    fill: none;
+  }
+  85% {
+    stroke: #043b3b;
+    fill: #043b3b;
+  }
+  98% {
+    stroke: none;
+    fill: none;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+
+
+.logo-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: logoPath 4s linear forwards;
+}
+
+@keyframes logoPath {
+  0%{
+    stroke: #043b3b;
+  }
+  18% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  20% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    stroke: #043b3b;
+  }
+  35% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  75% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+  85% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  90% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+  98% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 
+@keyframes path-ani-1 {
+  0% {
+      cx: 42.6;
+      cy: 28;
+  }
+
+  20% {
+      cx: 42.6;
+      cy: 35.8;
+  }
+
+  40% {
+      cx: 38.6;
+      cy: 39.8;
+  }
+  60% {
+      cx: 38.6;
+      cy: 46.8;
+  }
+  80% {
+      cx: 42.2;
+      cy: 50;
+  }
+  100% {
+      cx: 42.2;
+      cy: 55.5;
+  }
+}
+
+@keyframes path-ani-2 {
+  0% {
+      cx: 47.85;
+      cy: 57.4;
+  }
+  50% {
+      cx: 47.85;
+      cy: 46.4;
+  }
+  100% {
+      cx: 42.8;
+      cy: 42;
+  }
+}
+
+@keyframes path-ani-3 {
+  0% {
+      cx: 48.77;
+      cy: 27.5;
+  }
+  25% {
+      cx: 48.77;
+      cy: 38.8;
+  }
+  50% {
+      cx: 52.3;
+      cy: 42;
+  }
+  100% {
+      cx: 60;
+      cy: 42;
+  }
+}
+
+@keyframes path-ani-4 {
+  0% {
+      cx: 54.378;
+      cy: 27.5;
+  }
+  100% {
+      cx: 54.378;
+      cy: 34.7;
+  }
+}
+
+@keyframes path-ani-5 {
+  0% {
+      cx: 51.1;
+      cy: 57.4;
+  }
+  50% {
+      cx: 51.1;
+      cy: 52.5;
+  }
+  100% {
+      cx: 54.9;
+      cy: 49;
+  }
+}
+
+@keyframes path-ani-6 {
+  0% {
+      cx: 60.89;
+      cy: 27.5;
+  }
+  50% {
+      cx: 60.89;
+      cy: 33.6;
+  }
+  100% {
+      cx: 65.1;
+      cy: 37.12;
+  }
+}
+
+@keyframes path-ani-7 {
+  0% {
+      cx: 63.2;
+      cy: 57.4;
+  }
+  100% {
+      cx: 63.2;
+      cy: 49;
+  }
+}
+
+@keyframes path-ani-8 {
+  0% {
+      cx: 68.7;
+      cy: 57.4;
+  }
+
+  20% {
+      cx: 68.7;
+      cy: 48.9;
+  }
+
+  40% {
+      cx: 72.8;
+      cy: 45.2;
+  }
+  60% {
+      cx: 72.8;
+      cy: 38;
+  }
+  80% {
+      cx: 69;
+      cy: 34.7;
+  }
+  100% {
+      cx: 69;
+      cy: 30;
+  }
+} */
+
+/* body {
+  
+  margin: 0; 
+  padding: 0px;
+} */
+
+
+/* #test-out {
+  color: #fff;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+} */
+
+/* #test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-image: url("codersLodge.svg"); 
+  background-position: 0px 0px;
+  background-size: 400px 400px;
+  border: 1px solid red;
+  width: var(--width  );
+  height: var(--height);
+} */
+
+
+
+/* blinking animation testing */
+
+.zero  {
+  fill: url(#zero);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: zero 4s linear forwards;
+}
+
+
+@keyframes zero {
+  0% {
+    stroke-dashoffset: 1000;
+    stroke: #043b3b;
+  }
+  18% {
+    stroke-dashoffset: 800;
+    stroke: #043b3b;
+  }
+  20% {
+    stroke-dashoffset: 0;
+  }
+  35% {
+    stroke-dashoffset: 1000;
+  }
+  70% {
+    stroke-dashoffset: 0;
+  }
+  85% {
+    stroke-dashoffset: 0;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+  92% {
+    stroke-dashoffset: 1000;
+  }
+  98% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke: none;
+  }
+}
+
+.first  {
+  filter: drop-shadow(5px, 5px, 5px red 0.8);
+  --xyz: url(#first);
+  fill: none;
+  animation: logo 1s linear 2.5s forwards;
+}
+.second  {
+  --xyz: url(#second);
+  fill: none;
+  animation: logo 1s linear 2.5s forwards;
+}
+.third  {
+  --xyz: url(#third);
+  fill: none;
+  animation: logo 1s linear 2.5s forwards;
+}
+.fourth  {
+  --xyz: url(#fourth);
+  fill: none;
+  animation: logo 1s linear 2.5s forwards;
+}
+
+@keyframes logo {
+  0% {
+    fill: var(--xyz);
+  }
+  18% {
+    fill: var(--xyz);
+  }
+  20% {
+    fill: none;
+  }
+  35% {
+    fill: var(--xyz);
+  }
+  70% {
+    fill: none;
+  }
+  85% {
+    fill: var(--xyz);
+  }
+  90% {
+    fill: none;
+  }
+  98% {
+    fill: var(--xyz);
+  }
+  100% {
+    fill: var(--xyz);
+  }
+}
+
+
+[id^="logo-"], [id^="Zero-"] {
+  fill: none;
+}
+
+#Zero-1-C {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1s forwards;
+}
+#Zero-1-O {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.1s forwards;
+}
+#Zero-1-D {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.15s forwards;
+}
+#Zero-1-E {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.2s forwards;
+}
+#Zero-1-R {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.25s forwards;
+}
+#Zero-1-S {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.3s forwards;
+}
+#Zero-2-L  {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.35s forwards;
+}
+#Zero-2-O {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.4s forwards;
+}
+#Zero-2-D {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.45s forwards;
+}
+#Zero-2-G {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.5s forwards;
+}
+#Zero-2-E {
+  --xyz: #043b3b;
+  animation: tZero 1s linear 1.55s forwards;
+}
+
+
+
+#logo-1-C {
+  --xyz: #aa3235;
+  animation: tZero 2s linear 1.1s forwards;
+}
+#logo-1-O {
+  --xyz: #e37b01;
+  animation: tZero 2s linear 1.15s forwards;
+}
+#logo-1-D {
+  --xyz: #e37b01;
+  animation: tZero 2s linear 1.20s forwards;
+}
+#logo-1-E {
+  --xyz: #e37b01;
+  animation: tZero 2s linear 1.25s forwards;
+}
+#logo-1-R {
+  --xyz: #e37b01;
+  animation: tZero 2s linear 1.30s forwards;
+}
+#logo-1-S {
+  --xyz: #e37b01;
+  animation: tZero 2s linear 1.35s forwards;
+}
+#logo-2-L  {
+  --xyz: #18a033;
+  animation: tZero 2s linear 1.40s forwards;
+}
+#logo-2-O {
+  --xyz: #013a9e;
+  animation: tZero 2s linear 1.45s forwards;
+}
+#logo-2-D {
+  --xyz: #013a9e;
+  animation: tZero 2s linear 1.50s forwards;
+}
+#logo-2-G {
+  --xyz: #013a9e;
+  animation: tZero 2s linear 1.55s forwards;
+}
+#logo-2-E {
+  --xyz: #013a9e;
+  animation: tZero 2s linear 1.60s forwards;
+}
+
+
+@keyframes tZero {
+  0% {
+    fill: none;
+  }
+  18% {
+    fill: none;
+  }
+  20% {
+    fill: var(--xyz);
+  }
+  35% {
+    fill: none;
+  }
+  70% {
+    fill: var(--xyz);
+  }
+  85% {
+    fill: var(--xyz);
+  }
+  90% {
+    fill: var(--xyz);
+  }
+  92% {
+    fill: none;
+  }
+  98% {
+    sfill: var(--xyz);
+  }
+  100% {
+    fill: var(--xyz);
+  }
+}
+
+
+/* tLogo is used in JavaScript  */
+
+@keyframes tLogo {
+  0% {
+    fill: none;
+  }
+  18% {
+    fill: none;
+  }
+  20% {
+    fill: var(--xyz);
+  }
+  35% {
+    fill: none;
+  }
+  70% {
+    fill: var(--xyz);
+  }
+  85% {
+    fill: var(--xyz);
+  }
+  90% {
+    fill: var(--xyz);
+  }
+  92% {
+    fill: none;
+  }
+  98% {
+    sfill: var(--xyz);
+  }
+  100% {
+    fill: var(--xyz);
+  }
+}
+
+/* new testing */
+
+.logo-path-copy ,.makePathCopy , .makePathTopCopy, .makePathBootmCopy, .makePathLeftCopy, .makePathRightCopy {
+  stroke-dasharray:  0, 722, 20, 1536;
+  stroke: #fff;
+  fill: none;
+  z-index: 5;
+  animation: xyz 2s linear infinite forwards;
+}
+
+.makePathCopy  { 
+  stroke-dashoffset: -2000;
+  animation: xyz 2s linear 1.15s infinite forwards;
+}
+
+.makePathTopCopy  { 
+  stroke-dashoffset: 2000;
+  animation: xyz 2s linear 1.25s infinite forwards;
+}
+
+.makePathBootmCopy  { 
+  stroke-dashoffset: -2000;
+  animation: xyz 2s linear 1.8s infinite forwards;
+}
+
+.makePathLeftCopy  { 
+  stroke-dashoffset: 2000;
+  animation: xyz 2s linear 1.35s infinite forwards;
+}
+.makePathRightCopy  { 
+  stroke-dashoffset: 2000;
+  animation: xyz 2s linear 1.45s infinite forwards;
+}
+
+@keyframes xyz {
+  to{
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
